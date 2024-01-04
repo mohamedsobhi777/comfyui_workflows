@@ -1,0 +1,2145 @@
+{
+  "last_node_id": 159,
+  "last_link_id": 205,
+  "nodes": [
+    {
+      "id": 109,
+      "type": "VAEDecode",
+      "pos": [
+        2112.9663576049797,
+        870.5539943477628
+      ],
+      "size": {
+        "0": 140,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 125
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 127
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            126
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "shape": 1
+    },
+    {
+      "id": 115,
+      "type": "VAEDecode",
+      "pos": [
+        2913.3579585125995,
+        881.3022128640062
+      ],
+      "size": {
+        "0": 140,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 143
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 150
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            144
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "shape": 1
+    },
+    {
+      "id": 112,
+      "type": "VAEDecode",
+      "pos": [
+        2511.008134143067,
+        870.1879855091095
+      ],
+      "size": {
+        "0": 140,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 135
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 142
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            136
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "shape": 1
+    },
+    {
+      "id": 80,
+      "type": "VAEDecode",
+      "pos": [
+        1613.644042636902,
+        869.7839012682823
+      ],
+      "size": {
+        "0": 140,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 82
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 83
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            182
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "shape": 1
+    },
+    {
+      "id": 82,
+      "type": "VAELoader",
+      "pos": [
+        1594.644042636902,
+        1503.7839012682803
+      ],
+      "size": {
+        "0": 362.2625427246094,
+        "1": 58
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            83
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "vae-ft-mse-840000-ema-pruned.safetensors"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 106,
+      "type": "VAEDecode",
+      "pos": [
+        3317.9575197254467,
+        875.53875282866
+      ],
+      "size": {
+        "0": 140,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 117
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 124
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            201
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "shape": 1
+    },
+    {
+      "id": 33,
+      "type": "ADE_AnimateDiffUniformContextOptions",
+      "pos": [
+        440.6131999241471,
+        372.11782638957374
+      ],
+      "size": [
+        392.85588097119216,
+        198.3283070020442
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "CONTEXT_OPTIONS",
+          "type": "CONTEXT_OPTIONS",
+          "links": [
+            49
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ADE_AnimateDiffUniformContextOptions"
+      },
+      "widgets_values": [
+        16,
+        1,
+        4,
+        "uniform",
+        false
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 136,
+      "type": "ADE_AnimateDiffLoRALoader",
+      "pos": [
+        105.75873967329389,
+        618.0033508385782
+      ],
+      "size": {
+        "0": 355.20001220703125,
+        "1": 82
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prev_motion_lora",
+          "type": "MOTION_LORA",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MOTION_LORA",
+          "type": "MOTION_LORA",
+          "links": [
+            195
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ADE_AnimateDiffLoRALoader"
+      },
+      "widgets_values": [
+        "v2_lora_ZoomOut.ckpt",
+        0.1
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 36,
+      "type": "ADE_AnimateDiffLoaderWithContext",
+      "pos": [
+        117.13571335218813,
+        378.92794069036216
+      ],
+      "size": {
+        "0": 306.3221435546875,
+        "1": 190
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 48
+        },
+        {
+          "name": "context_options",
+          "type": "CONTEXT_OPTIONS",
+          "link": 49
+        },
+        {
+          "name": "motion_lora",
+          "type": "MOTION_LORA",
+          "link": null,
+          "slot_index": 2
+        },
+        {
+          "name": "motion_model_settings",
+          "type": "MOTION_MODEL_SETTINGS",
+          "link": null,
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            123,
+            134,
+            139,
+            146,
+            156
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ADE_AnimateDiffLoaderWithContext"
+      },
+      "widgets_values": [
+        "mm_sd_v15_v2.ckpt",
+        "sqrt_linear (AnimateDiff)",
+        1,
+        true
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 3,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -1184.1791457437496,
+        334.76409451817864
+      ],
+      "size": [
+        384.4553970520017,
+        313.62917543640094
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            119,
+            128,
+            138,
+            147,
+            153
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Prompt Positive",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "A Young Sophisticated Model Woman posing in old Sheath Sequin Mini Dress torn worn, against a white background, image capturing the dynamic and implied movement, contrast, Superb sharpness, Photorealistic, 8k, natural lighting, HDR, 16k, high resolution"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -788.589599609375,
+        338.8820495605469
+      ],
+      "size": [
+        349.99878555468706,
+        309.4439956906673
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            120,
+            129,
+            137,
+            145,
+            155
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Prompt Négative",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "(worst quality, low quality: 1.4)"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 5,
+      "type": "PrimitiveNode",
+      "pos": [
+        -418.589599609375,
+        384.8820495605469
+      ],
+      "size": [
+        210,
+        103.92810546319595
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            122,
+            130,
+            140,
+            148,
+            152
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "seed"
+          }
+        }
+      ],
+      "title": "Seed",
+      "properties": {},
+      "widgets_values": [
+        680,
+        "fixed"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 81,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        1600.644042636902,
+        972.7839012682819
+      ],
+      "size": [
+        341.7947998046875,
+        517.7947998046875
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 182
+        }
+      ],
+      "outputs": [],
+      "title": "Render Video 🅥🅗🅢",
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "GroupTest_01",
+        "format": "image/gif",
+        "pingpong": false,
+        "save_image": true,
+        "crf": 40,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "GroupTest_01_00004.gif",
+            "subfolder": "",
+            "type": "output",
+            "format": "image/gif"
+          }
+        }
+      },
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 113,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        2406,
+        977
+      ],
+      "size": [
+        346.61309814453125,
+        522.6130981445312
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 136
+        }
+      ],
+      "outputs": [],
+      "title": "Render Video 🅥🅗🅢",
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "GroupTest_03",
+        "format": "image/gif",
+        "pingpong": false,
+        "save_image": true,
+        "crf": 40,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "GroupTest_03_00002.gif",
+            "subfolder": "",
+            "type": "output",
+            "format": "image/gif"
+          }
+        }
+      },
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 116,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        2804,
+        980
+      ],
+      "size": [
+        346.61309814453125,
+        522.6130981445312
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 144
+        }
+      ],
+      "outputs": [],
+      "title": "Render Video 🅥🅗🅢",
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "GroupTest_04",
+        "format": "image/gif",
+        "pingpong": false,
+        "save_image": true,
+        "crf": 40,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "GroupTest_04_00002.gif",
+            "subfolder": "",
+            "type": "output",
+            "format": "image/gif"
+          }
+        }
+      },
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 110,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        2004,
+        978
+      ],
+      "size": [
+        346.61309814453125,
+        522.6130981445312
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 126
+        }
+      ],
+      "outputs": [],
+      "title": "Render Video 🅥🅗🅢",
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "GroupTest_02",
+        "format": "image/gif",
+        "pingpong": false,
+        "save_image": true,
+        "crf": 40,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "GroupTest_02_00004.gif",
+            "subfolder": "",
+            "type": "output",
+            "format": "image/gif"
+          }
+        }
+      },
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 79,
+      "type": "KSampler",
+      "pos": [
+        1609.8619098691458,
+        320.5002473071219
+      ],
+      "size": {
+        "0": 319.3819885253906,
+        "1": 500.20703125
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 156
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 153
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 155
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 154
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 152,
+          "widget": {
+            "name": "seed"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            82,
+            205
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Render Preview",
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        680,
+        "fixed",
+        25,
+        6,
+        "euler_ancestral",
+        "normal",
+        1
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "shape": 1
+    },
+    {
+      "id": 108,
+      "type": "KSampler",
+      "pos": [
+        2024.9663576049809,
+        322.5539943477629
+      ],
+      "size": {
+        "0": 319.3819885253906,
+        "1": 500.20703125
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 134
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 128
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 129
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 131
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 130,
+          "widget": {
+            "name": "seed"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            125
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Render Preview",
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        680,
+        "fixed",
+        25,
+        6.5,
+        "euler_ancestral",
+        "normal",
+        1
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "shape": 1
+    },
+    {
+      "id": 111,
+      "type": "KSampler",
+      "pos": [
+        2425.451188830567,
+        327.8674877063752
+      ],
+      "size": {
+        "0": 319.3819885253906,
+        "1": 500.20703125
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 139
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 138
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 137
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 141
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 140,
+          "widget": {
+            "name": "seed"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            135
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Render Preview",
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        680,
+        "fixed",
+        25,
+        7,
+        "euler_ancestral",
+        "normal",
+        1
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "shape": 1
+    },
+    {
+      "id": 114,
+      "type": "KSampler",
+      "pos": [
+        2821.108446793851,
+        329.8772037087331
+      ],
+      "size": {
+        "0": 319.3819885253906,
+        "1": 500.20703125
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 146
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 147
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 145
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 149
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 148,
+          "widget": {
+            "name": "seed"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            143
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Render Preview",
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        680,
+        "fixed",
+        25,
+        7.5,
+        "euler_ancestral",
+        "normal",
+        1
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "shape": 1
+    },
+    {
+      "id": 105,
+      "type": "KSampler",
+      "pos": [
+        3218,
+        328
+      ],
+      "size": {
+        "0": 319.3819885253906,
+        "1": 500.20703125
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 123
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 119
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 120
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 121
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 122,
+          "widget": {
+            "name": "seed"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            117
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Render Preview",
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        680,
+        "fixed",
+        45,
+        12.5,
+        "euler_ancestral",
+        "normal",
+        1
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "shape": 1
+    },
+    {
+      "id": 32,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -1085.589599609375,
+        835.8820495605469
+      ],
+      "size": [
+        693.5989070034793,
+        98
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            48
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            44
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            124,
+            127,
+            142,
+            150,
+            188
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "title": "Choix du Checkpoint",
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "aZovyaPhotoreal_v2.safetensors"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 131,
+      "type": "ImageUpscaleWithModel",
+      "pos": [
+        1197,
+        643
+      ],
+      "size": [
+        226.8000030517578,
+        46
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 179,
+          "slot_index": 0
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 183,
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            186
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageUpscaleWithModel"
+      },
+      "shape": 1
+    },
+    {
+      "id": 132,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        896,
+        629
+      ],
+      "size": [
+        277.50084655761634,
+        58
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            179
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "ESRGAN_4x.pth"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 149,
+      "type": "Note",
+      "pos": [
+        1044,
+        508
+      ],
+      "size": [
+        336,
+        58
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 6,
+      "mode": 0,
+      "title": "Reliez samples sur le GroupTest réussi",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "Link samples on successful GroupTest ----------->"
+      ],
+      "color": "#222",
+      "bgcolor": "#000",
+      "shape": 1
+    },
+    {
+      "id": 142,
+      "type": "ADE_AnimateDiffLoRALoader",
+      "pos": [
+        102,
+        756
+      ],
+      "size": {
+        "0": 355.20001220703125,
+        "1": 82
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prev_motion_lora",
+          "type": "MOTION_LORA",
+          "link": 195
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MOTION_LORA",
+          "type": "MOTION_LORA",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ADE_AnimateDiffLoRALoader"
+      },
+      "widgets_values": [
+        "v2_lora_PanLeft.ckpt",
+        0.2
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 153,
+      "type": "Note",
+      "pos": [
+        478,
+        749
+      ],
+      "size": [
+        349.21812653344455,
+        58
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 7,
+      "mode": 0,
+      "title": "Reconnectez MOTION_LORA",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "<-----------Link MOTION_LORA"
+      ],
+      "color": "#222",
+      "bgcolor": "#000",
+      "shape": 1
+    },
+    {
+      "id": 148,
+      "type": "Note",
+      "pos": [
+        99,
+        929
+      ],
+      "size": [
+        734.2138664397855,
+        830.2537510221061
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "\n-------------------------┬┬--MULTI_RENDER--┬┬------------------------\n----------------------＼(((￣(￣(￣▽￣)￣)￣)))／----------------------\n\n\n\nAvec ce multi-render, vous allez pouvoir faire des tests de masse organisés.\n\n-sur le paramètre \"sampler\"\n-sur le paramètre \"step\"\n-sur le paramètre \"cfg\"\n\nEntre autres.\n\nCela va vous permettre dans le cadre de l'animation, de choisir les bons paramètres en regard du modèle utilisé.\n\n\nJe procède comme suit :\nD'abord, je teste le sampler Euler et dpm (pas besoin de les tester tous, certains non jamais bien fonctionnés).\nEnsuite, je vais tester 4 ou 5 cfg différents, dans le cadre du mouvement des membres d'un personnage, certaines valeurs permettent une meilleure fluidité.\nJe finis par les steep je teste de 20 à 30, au delà ça abîme les mouvements et le personnage.\n\nVous pouvez si vous voulez ajouter des mouvements dans la section Paramètres d'Animation, reconnecter les \"AnimateDiff LoRA Loader\"\nUn Upscale de votre meilleure création, connecter celui-ci au \"GroupTest\" choisi.\n\nVoilà !\n\n\nPs.: une astuce pour de beaux mouvements, la phrase : \"image capturing the dynamic and implied movement\"\n\n\n-------------------------------------------------------(〃￣︶￣)人(￣︶￣〃)----------------------------------------------\n\n\n-------------------------┬┬--MULTI_RENDER--┬┬------------------------\n----------------------＼(((￣(￣(￣▽￣)￣)￣)))／----------------------\n\n\nWith this multi-render, you can perform organized mass tests.\n\n-on the \"sampler\" parameter\n-on the \"step\" parameter\n-on the \"cfg\" parameter\n\namong others.\n\nThis will enable you to choose the right parameters for the model you're using for your animation.\n\nI proceed as follows:\nFirst, I test the Euler sampler and dpm (no need to test them all, some have never worked properly).\nNext, I'll test 4 or 5 different cfg, in the context of the movement of a character's limbs.\nEventually, I'll test from 20 to 30 cfg, as more than that will spoil the character's movements.\n\nIf you want to add movements, you can reconnect the \"AnimateDiff LoRA Loader\" in the Animation Settings section.\nAn Upscale of your best creation, connect it to the chosen \"GroupTest\".\n\nThat's it!\n\nPs.: a tip for beautiful movements, the phrase: \"image capturing the dynamic and implied movement\"."
+      ],
+      "color": "#222",
+      "bgcolor": "#000",
+      "shape": 1
+    },
+    {
+      "id": 9,
+      "type": "EmptyLatentImage",
+      "pos": [
+        -188,
+        381
+      ],
+      "size": {
+        "0": 210,
+        "1": 106
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            121,
+            131,
+            141,
+            149,
+            154
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Taille et Nombre d'Image",
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        512,
+        512,
+        32
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 133,
+      "type": "VAEDecode",
+      "pos": [
+        1400,
+        517
+      ],
+      "size": {
+        "0": 140,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 205,
+          "slot_index": 0
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 188
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            183
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "shape": 1
+    },
+    {
+      "id": 143,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        3221,
+        986
+      ],
+      "size": [
+        333.5989576904303,
+        509.5989576904303
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 201,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [],
+      "title": "Render Video 🅥🅗🅢",
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "aaa_readme",
+        "format": "image/gif",
+        "pingpong": false,
+        "save_image": true,
+        "crf": 40,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "aaa_readme_00188.gif",
+            "subfolder": "",
+            "type": "output",
+            "format": "image/gif"
+          }
+        }
+      },
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 4,
+      "type": "CLIPSetLastLayer",
+      "pos": [
+        -333.3233781294391,
+        663.0504261363637
+      ],
+      "size": {
+        "0": 294.4451599121094,
+        "1": 58.575103759765625
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 44
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            2,
+            3
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPSetLastLayer"
+      },
+      "widgets_values": [
+        -1
+      ],
+      "shape": 1
+    },
+    {
+      "id": 155,
+      "type": "Note",
+      "pos": [
+        873,
+        57
+      ],
+      "size": [
+        677.6905780639654,
+        247.05995997009285
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "title": "What's the best parameter?",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "\n------------------------------------------Quel sera le meilleur paramètre ?------------------------------------------\n                                          ＼(((￣(￣(￣---▽---￣)￣)￣)))／\n\n-------------Quel sera le meilleur \"sampler\", le meilleur paramètre \"step\", le meilleur paramètre \"cfg\" ?------------\n\n\n--(〃￣︶￣)人(￣︶￣〃)Avec ce multi-render, vous allez pouvoir faire des tests de masse organisés〃￣︶￣)人(￣︶￣〃)--\n\n\n\n\n---------------------------------------------What's the best parameter?----------------------------------------------\n----------------------What's the best sampler, the best step parameter, the best cfg parameter?----------------------\n\n----------------------With this multi-render, you'll be able to carry out organized mass tests.----------------------"
+      ],
+      "color": "#222",
+      "bgcolor": "#000",
+      "shape": 4
+    },
+    {
+      "id": 158,
+      "type": "Note",
+      "pos": [
+        1600,
+        1661
+      ],
+      "size": [
+        603.0768703437489,
+        521.0720343742178
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 11,
+      "mode": 0,
+      "title": "!! WARNING !!",
+      "properties": {
+        "text": ""
+      },
+      "widgets_values": [
+        "\n______________________________En cliquant sur \"Queue Prompt\"_______________________________________\n\n\n^_____^ vous participé aux réchauffement climatique en générant un phénomène nommé antropie ^_____^\n\n\n^_____^ L'antropie dans ce cas, consistera à transformer de l'énergie électrique en chaleur ^_____^\n\n^_____^ La chaleur ne disparaitra pas, et nous ne la collecterons pas pour fabriqué de l'énergie ^_____^ \n\n\nAinsi, cliquer sur \"Queue Prompt\" participe à la hausse des statistiques, en matière d'élévation des températures !\n\n\n^_____^ !!! Soyez concsient de cela, et agisser en connaissance de causes !!! ^_____^ \n\n\n\n---------------------------------------------------------------------------------------------------------\n\n\n______________________________Click on \"Queue Prompt\"_______________________________________\n\n\n^_____^ you participate in global warming by generating a phenomenon called entropy ^_____^\n\n\n^_____^ Entropy, in this case, consists of transforming electrical energy into heat ^_____^\n\n^_____^ Heat won't disappear, and we won't collect it to make energy ^_____^ \n\n\nSo, clicking on \"Queue Prompt\" contributes to the rising temperature statistics!\n\n\n^_____^ !!! Be aware of this, and act with full knowledge of the causes!!!! ^_____^ "
+      ],
+      "color": "#322",
+      "bgcolor": "#533",
+      "shape": 1
+    },
+    {
+      "id": 135,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        886,
+        742
+      ],
+      "size": [
+        648.3417670043948,
+        824.3417670043948
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 186
+        }
+      ],
+      "outputs": [],
+      "title": "Render Video 🅥🅗🅢",
+      "properties": {
+        "Node name for S&R": "VHS_VideoCombine"
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "aaa_readme",
+        "format": "image/gif",
+        "pingpong": false,
+        "save_image": true,
+        "crf": 41,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "aaa_readme_00189.gif",
+            "subfolder": "",
+            "type": "output",
+            "format": "image/gif"
+          }
+        }
+      },
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      2,
+      4,
+      0,
+      3,
+      0,
+      "CLIP"
+    ],
+    [
+      3,
+      4,
+      0,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      44,
+      32,
+      1,
+      4,
+      0,
+      "CLIP"
+    ],
+    [
+      48,
+      32,
+      0,
+      36,
+      0,
+      "MODEL"
+    ],
+    [
+      49,
+      33,
+      0,
+      36,
+      1,
+      "CONTEXT_OPTIONS"
+    ],
+    [
+      82,
+      79,
+      0,
+      80,
+      0,
+      "LATENT"
+    ],
+    [
+      83,
+      82,
+      0,
+      80,
+      1,
+      "VAE"
+    ],
+    [
+      117,
+      105,
+      0,
+      106,
+      0,
+      "LATENT"
+    ],
+    [
+      119,
+      3,
+      0,
+      105,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      120,
+      6,
+      0,
+      105,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      121,
+      9,
+      0,
+      105,
+      3,
+      "LATENT"
+    ],
+    [
+      122,
+      5,
+      0,
+      105,
+      4,
+      "INT"
+    ],
+    [
+      123,
+      36,
+      0,
+      105,
+      0,
+      "MODEL"
+    ],
+    [
+      124,
+      32,
+      2,
+      106,
+      1,
+      "VAE"
+    ],
+    [
+      125,
+      108,
+      0,
+      109,
+      0,
+      "LATENT"
+    ],
+    [
+      126,
+      109,
+      0,
+      110,
+      0,
+      "IMAGE"
+    ],
+    [
+      127,
+      32,
+      2,
+      109,
+      1,
+      "VAE"
+    ],
+    [
+      128,
+      3,
+      0,
+      108,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      129,
+      6,
+      0,
+      108,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      130,
+      5,
+      0,
+      108,
+      4,
+      "INT"
+    ],
+    [
+      131,
+      9,
+      0,
+      108,
+      3,
+      "LATENT"
+    ],
+    [
+      134,
+      36,
+      0,
+      108,
+      0,
+      "MODEL"
+    ],
+    [
+      135,
+      111,
+      0,
+      112,
+      0,
+      "LATENT"
+    ],
+    [
+      136,
+      112,
+      0,
+      113,
+      0,
+      "IMAGE"
+    ],
+    [
+      137,
+      6,
+      0,
+      111,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      138,
+      3,
+      0,
+      111,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      139,
+      36,
+      0,
+      111,
+      0,
+      "MODEL"
+    ],
+    [
+      140,
+      5,
+      0,
+      111,
+      4,
+      "INT"
+    ],
+    [
+      141,
+      9,
+      0,
+      111,
+      3,
+      "LATENT"
+    ],
+    [
+      142,
+      32,
+      2,
+      112,
+      1,
+      "VAE"
+    ],
+    [
+      143,
+      114,
+      0,
+      115,
+      0,
+      "LATENT"
+    ],
+    [
+      144,
+      115,
+      0,
+      116,
+      0,
+      "IMAGE"
+    ],
+    [
+      145,
+      6,
+      0,
+      114,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      146,
+      36,
+      0,
+      114,
+      0,
+      "MODEL"
+    ],
+    [
+      147,
+      3,
+      0,
+      114,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      148,
+      5,
+      0,
+      114,
+      4,
+      "INT"
+    ],
+    [
+      149,
+      9,
+      0,
+      114,
+      3,
+      "LATENT"
+    ],
+    [
+      150,
+      32,
+      2,
+      115,
+      1,
+      "VAE"
+    ],
+    [
+      152,
+      5,
+      0,
+      79,
+      4,
+      "INT"
+    ],
+    [
+      153,
+      3,
+      0,
+      79,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      154,
+      9,
+      0,
+      79,
+      3,
+      "LATENT"
+    ],
+    [
+      155,
+      6,
+      0,
+      79,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      156,
+      36,
+      0,
+      79,
+      0,
+      "MODEL"
+    ],
+    [
+      179,
+      132,
+      0,
+      131,
+      0,
+      "UPSCALE_MODEL"
+    ],
+    [
+      182,
+      80,
+      0,
+      81,
+      0,
+      "IMAGE"
+    ],
+    [
+      183,
+      133,
+      0,
+      131,
+      1,
+      "IMAGE"
+    ],
+    [
+      186,
+      131,
+      0,
+      135,
+      0,
+      "IMAGE"
+    ],
+    [
+      188,
+      32,
+      2,
+      133,
+      1,
+      "VAE"
+    ],
+    [
+      195,
+      136,
+      0,
+      142,
+      0,
+      "MOTION_LORA"
+    ],
+    [
+      201,
+      106,
+      0,
+      143,
+      0,
+      "IMAGE"
+    ],
+    [
+      205,
+      79,
+      0,
+      133,
+      0,
+      "LATENT"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "Change to match your model",
+      "bounding": [
+        -351,
+        577,
+        330,
+        169
+      ],
+      "color": "#3f789e",
+      "font_size": 24
+    },
+    {
+      "title": "Paramètres d'Animation",
+      "bounding": [
+        95,
+        292,
+        746,
+        568
+      ],
+      "color": "#b58b2a",
+      "font_size": 24
+    },
+    {
+      "title": "GroupTest_01",
+      "bounding": [
+        1583,
+        241,
+        376,
+        1333
+      ],
+      "color": "#3f789e",
+      "font_size": 24
+    },
+    {
+      "title": "GroupTest_05",
+      "bounding": [
+        3198,
+        255,
+        383,
+        1329
+      ],
+      "color": "#3f789e",
+      "font_size": 24
+    },
+    {
+      "title": "GroupTest_02",
+      "bounding": [
+        1995,
+        249,
+        367,
+        1329
+      ],
+      "color": "#3f789e",
+      "font_size": 24
+    },
+    {
+      "title": "GroupTest_03",
+      "bounding": [
+        2395,
+        254,
+        372,
+        1326
+      ],
+      "color": "#3f789e",
+      "font_size": 24
+    },
+    {
+      "title": "GroupTest_04",
+      "bounding": [
+        2793,
+        256,
+        380,
+        1327
+      ],
+      "color": "#3f789e",
+      "font_size": 24
+    },
+    {
+      "title": "Upscale",
+      "bounding": [
+        866,
+        431,
+        693,
+        1335
+      ],
+      "color": "#3f789e",
+      "font_size": 24
+    },
+    {
+      "title": "Paramètres d'Image",
+      "bounding": [
+        -1194,
+        261,
+        1240,
+        699
+      ],
+      "color": "#8A8",
+      "font_size": 24
+    }
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

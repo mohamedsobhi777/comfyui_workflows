@@ -1,0 +1,811 @@
+{
+  "last_node_id": 135,
+  "last_link_id": 146,
+  "nodes": [
+    {
+      "id": 30,
+      "type": "VAELoader",
+      "pos": [
+        2160.0058207978554,
+        845.0398740094665
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            91
+          ],
+          "slot_index": 0,
+          "label": "VAE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "YOZORA.vae.pt"
+      ]
+    },
+    {
+      "id": 32,
+      "type": "VAEDecode",
+      "pos": [
+        2428.0058207978554,
+        538.0398740094664
+      ],
+      "size": {
+        "0": 200,
+        "1": 46
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 92,
+          "label": "Latent"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 91,
+          "label": "VAE"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            4,
+            23
+          ],
+          "slot_index": 0,
+          "label": "图像"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 49,
+      "type": "CLIPSetLastLayer",
+      "pos": [
+        1550.005820797855,
+        532.0398740094665
+      ],
+      "size": {
+        "0": 210,
+        "1": 58
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 84,
+          "label": "CLIP"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            72,
+            85
+          ],
+          "slot_index": 0,
+          "label": "CLIP"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPSetLastLayer"
+      },
+      "widgets_values": [
+        -2
+      ]
+    },
+    {
+      "id": 3,
+      "type": "PreviewImage",
+      "pos": [
+        2677.0058207978554,
+        481.0398740094667
+      ],
+      "size": {
+        "0": 960,
+        "1": 246
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 4,
+          "label": "图像"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 54,
+      "type": "ADE_AnimateDiffCombine",
+      "pos": [
+        2665.0058207978554,
+        841.0398740094665
+      ],
+      "size": {
+        "0": 597.736328125,
+        "1": 789.736328125
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 23,
+          "label": "图像"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GIF",
+          "type": "GIF",
+          "links": null,
+          "shape": 3,
+          "label": "GIF"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ADE_AnimateDiffCombine"
+      },
+      "widgets_values": [
+        8,
+        0,
+        "AnimateDiff",
+        "image/gif",
+        false,
+        true
+      ]
+    },
+    {
+      "id": 51,
+      "type": "Text box",
+      "pos": [
+        1295,
+        686
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            138
+          ],
+          "shape": 3,
+          "label": "字符串",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "1girl, solo, upper body, black hair, twintail, expressionless, looking at viewer, talking, speaking, sweater"
+      ]
+    },
+    {
+      "id": 40,
+      "type": "ADE_AnimateDiffLoaderWithContext",
+      "pos": [
+        1837,
+        364
+      ],
+      "size": {
+        "0": 210,
+        "1": 142
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 142,
+          "label": "模型"
+        },
+        {
+          "name": "context_options",
+          "type": "CONTEXT_OPTIONS",
+          "link": 11,
+          "label": "上下文设置"
+        },
+        {
+          "name": "motion_lora",
+          "type": "MOTION_LORA",
+          "link": null,
+          "label": "动态LoRA",
+          "slot_index": 2
+        },
+        {
+          "name": "motion_model_settings",
+          "type": "MOTION_MODEL_SETTINGS",
+          "link": null,
+          "label": "动态模型设置"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            80
+          ],
+          "slot_index": 0,
+          "label": "模型"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ADE_AnimateDiffLoaderWithContext"
+      },
+      "widgets_values": [
+        "improved3DMotion_improved3DV1.ckpt",
+        "sqrt_linear (AnimateDiff)"
+      ]
+    },
+    {
+      "id": 31,
+      "type": "KSampler",
+      "pos": [
+        2160.0058207978554,
+        532.0398740094665
+      ],
+      "size": {
+        "0": 210,
+        "1": 262
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 80,
+          "label": "模型"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 144,
+          "label": "正面提示词"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 145,
+          "label": "负面提示词"
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 104,
+          "label": "Latent"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            92
+          ],
+          "slot_index": 0,
+          "label": "Latent"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        14,
+        "increment",
+        20,
+        7,
+        "euler_ancestral",
+        "karras",
+        1
+      ]
+    },
+    {
+      "id": 135,
+      "type": "LoraLoader",
+      "pos": [
+        1239,
+        486
+      ],
+      "size": {
+        "0": 210,
+        "1": 126
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 141,
+          "label": "模型"
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 143,
+          "label": "CLIP"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            142
+          ],
+          "shape": 3,
+          "label": "模型",
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": null,
+          "shape": 3,
+          "label": "CLIP",
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "neg4all_bdsqlsz_V3.5.safetensors",
+        1,
+        1
+      ]
+    },
+    {
+      "id": 37,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1838.0058207978548,
+        845.0398740094665
+      ],
+      "size": {
+        "0": 210,
+        "1": 76
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 72,
+          "label": "CLIP"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            145
+          ],
+          "slot_index": 0,
+          "label": "条件"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "nsfw, blurry, ugly, text, embedding:easynegative"
+      ]
+    },
+    {
+      "id": 34,
+      "type": "EmptyLatentImage",
+      "pos": [
+        1836,
+        989
+      ],
+      "size": {
+        "0": 210,
+        "1": 106
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            104
+          ],
+          "slot_index": 0,
+          "label": "Latent"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        576,
+        768,
+        24
+      ]
+    },
+    {
+      "id": 41,
+      "type": "ADE_AnimateDiffUniformContextOptions",
+      "pos": [
+        1458.005820797855,
+        334.039874009467
+      ],
+      "size": {
+        "0": 302.3999938964844,
+        "1": 154
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CONTEXT_OPTIONS",
+          "type": "CONTEXT_OPTIONS",
+          "links": [
+            11
+          ],
+          "slot_index": 0,
+          "label": "上下文设置"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ADE_AnimateDiffUniformContextOptions"
+      },
+      "widgets_values": [
+        16,
+        1,
+        8,
+        "uniform",
+        false
+      ]
+    },
+    {
+      "id": 133,
+      "type": "Text box",
+      "pos": [
+        1300,
+        930
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            139
+          ],
+          "shape": 3,
+          "label": "字符串",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Text box"
+      },
+      "widgets_values": [
+        "\"0\":\"open eyes\",\n\"1\":\"open eyes\",\n\"2\":\"open eyes\",\n\"3\":\"open eyes\",\n\"4\":\"open eyes\",\n\"5\":\"open eyes\",\n\"6\":\"open eyes\",\n\"7\":\"open eyes\",\n\"8\":\"open eyes\",\n\"9\":\"open eyes\",\n\"10\":\"one eye closed\",\n\"11\":\"one eye closed\",\n\"12\":\"one eye closed\",\n\"13\":\"one eye closed\",\n\"14\":\"one eye closed\",\n\"15\":\"open eyes\",\n\"16\":\"open eyes\",\n\"17\":\"open eyes\",\n\"18\":\"open eyes\",\n\"19\":\"open eyes\",\n\"20\":\"open eyes\",\n\"21\":\"open eyes\",\n\"22\":\"open eyes\",\n\"23\":\"open eyes\""
+      ]
+    },
+    {
+      "id": 39,
+      "type": "BatchPromptSchedule",
+      "pos": [
+        1830,
+        532
+      ],
+      "size": {
+        "0": 210,
+        "1": 229.99998474121094
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 85,
+          "label": "CLIP"
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 139,
+          "widget": {
+            "name": "text"
+          },
+          "label": "文本"
+        },
+        {
+          "name": "pre_text",
+          "type": "STRING",
+          "link": 138,
+          "widget": {
+            "name": "pre_text"
+          },
+          "label": "预置文本",
+          "slot_index": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            144
+          ],
+          "slot_index": 0,
+          "label": "条件"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BatchPromptSchedule"
+      },
+      "widgets_values": [
+        "\"0\" :\"masterpiece, best quality, 1girl, white hair, long hair, close-up, closed eyes, expressionless, head tilt\",\n\"12\" :\"masterpiece, best quality, 1girl, white hair, long hair, portrait, closed eyes, smile, head tilt\",\n\"24\" :\"masterpiece, best quality, 1girl, white hair, long hair, portrait, open eyes, smile, head tilt\"",
+        24,
+        "",
+        "",
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": 36,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        907,
+        403
+      ],
+      "size": {
+        "0": 210,
+        "1": 98
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            141
+          ],
+          "slot_index": 0,
+          "label": "模型"
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            84,
+            143
+          ],
+          "slot_index": 1,
+          "label": "CLIP"
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [],
+          "slot_index": 2,
+          "label": "VAE"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "cardosAnime_v20.safetensors"
+      ]
+    }
+  ],
+  "links": [
+    [
+      4,
+      32,
+      0,
+      3,
+      0,
+      "预览"
+    ],
+    [
+      11,
+      41,
+      0,
+      40,
+      1,
+      "ADE_AnimateDiffLoaderWithContext"
+    ],
+    [
+      23,
+      32,
+      0,
+      54,
+      0,
+      "IMAGE"
+    ],
+    [
+      72,
+      49,
+      0,
+      37,
+      0,
+      "CLIP"
+    ],
+    [
+      80,
+      40,
+      0,
+      31,
+      0,
+      "MODEL"
+    ],
+    [
+      84,
+      36,
+      1,
+      49,
+      0,
+      "CLIP"
+    ],
+    [
+      85,
+      49,
+      0,
+      39,
+      0,
+      "CLIP"
+    ],
+    [
+      91,
+      30,
+      0,
+      32,
+      1,
+      "VAE"
+    ],
+    [
+      92,
+      31,
+      0,
+      32,
+      0,
+      "LATENT"
+    ],
+    [
+      104,
+      34,
+      0,
+      31,
+      3,
+      "LATENT"
+    ],
+    [
+      138,
+      51,
+      0,
+      39,
+      2,
+      "STRING"
+    ],
+    [
+      139,
+      133,
+      0,
+      39,
+      1,
+      "STRING"
+    ],
+    [
+      141,
+      36,
+      0,
+      135,
+      0,
+      "MODEL"
+    ],
+    [
+      142,
+      135,
+      0,
+      40,
+      0,
+      "MODEL"
+    ],
+    [
+      143,
+      36,
+      1,
+      135,
+      1,
+      "CLIP"
+    ],
+    [
+      144,
+      39,
+      0,
+      31,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      145,
+      37,
+      0,
+      31,
+      2,
+      "CONDITIONING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
